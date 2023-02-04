@@ -43,7 +43,7 @@ This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](
 3. Set the values as shown in the screenshot above, you can find the values to copy below.
 
    ```yaml
-   Font: 13ps JetBrains Mono,monospace
+   Font: 13px JetBrains Mono,monospace
    Text color: #f8f8f2
    Background color: #282A36
    Info color: #6272a4
@@ -61,3 +61,5 @@ This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](
 ## 🎨 Tweaks
 
 Certain customizations like hiding the Firefox logo on the newtab page or switching to floating tabs can be done on the theme. More information on how to do this can be found in the original [repository](https://github.com/bmFtZQ/edge-frfox#tweaks).
+
+You can also check out [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) themes (e.g. [StackOverflow](https://draculatheme.com/stackoverflow) or [GitHub](https://draculatheme.com/github)).
