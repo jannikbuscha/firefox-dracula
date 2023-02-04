@@ -1,11 +1,1 @@
-.DS_Store
-inkscape-template.svg
-/userChrome.css
-/userContent.css
-.vscode
-/icons
-/chrome/background-0.jpg
-/chrome/background-1.jpg
-/chrome/background-0.png
-/chrome/background-1.png
-/custom/
+/.idea

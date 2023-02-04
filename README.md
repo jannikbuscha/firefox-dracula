@@ -1,13 +1,21 @@
-# Edge-Frfox
-A Firefox userChrome.css theme that aims to recreate the look and feel of the Chromium version of Microsoft Edge.
+# Firefox Dracula
 
-<!-- use <img> element to set a maximum width -->
-<img src="screenshots/thumbnail.png" alt="thumbnail screenshot" title="Screenshot taken with macOS Monterey / Firefox Nightly 96.0a1 (2021-11-30)" width="800">
+This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](https://github.com/bmFtZQ/edge-frfox) that aims to recreate the look and feel of the Chromium version of [Microsoft Edge](https://www.microsoft.com/edge) in the style of [Dracula](https://draculatheme.com/).
 
-## How to install
+**[Extra Features](#-extra-features) • [Installation](#-installation) • [JSON Viewer](#-json-viewer) • [Tweaks](#-tweaks)**
+
+![thumbnail](screenshots/thumbnail.png)
+
+## 💫 Extra Features
+
+- Custom DevTools
+- Custom [JSON Viewer](#-json-viewer)
+
+## ⚙️ Installation
+
 1. Go to `about:support` and click the "Open Folder/Show in Finder" button for the root directory of your browser profile/s.
 2. Download and copy the `chrome` folder into the profile folder.
-3. Go to about:config and change these preferences:
+3. Go to `about:config` and change these preferences:
 
    ### For all operating systems:
    1. `toolkit.legacyUserProfileCustomizations.stylesheets` = `true`
@@ -20,110 +28,36 @@ A Firefox userChrome.css theme that aims to recreate the look and feel of the Ch
    ### Recommended:
    1. `browser.tabs.tabMinWidth` = `66`
    2. `browser.tabs.tabClipWidth` = `86`
+   3. `browser.tabs.tabmanager.enabled` = `false`
 
-   ### Optional:
-   1. To use the light theme in private browsing mode set `browser.theme.dark-private-windows` = `false`
+## 📜 JSON Viewer
 
-   Additional tweaks can also be applied to the theme, such as Mica (Windows 11 Only), Floating Tabs and more. See [Tweaks](#tweaks).
+| Preview                       | Settings                                        |
+|-------------------------------|-------------------------------------------------|
+| ![json](screenshots/json.png) | ![json-settings](screenshots/json-settings.png) |
 
-**Note: Most frequently tested on macOS**
+### Installation
 
-## Screenshots
-| Theme                               | Light                                   | Dark                                   |
-| ----------------------------------- | --------------------------------------- | -------------------------------------- |
-| Default (Windows 11)                | ![Light][s-l]                           | ![Dark][s-d]                           |
-| Floating Tabs (Windows 11)          | ![Light, Floating Tabs][s-lf]           | ![Dark, Floating Tabs][s-df]           |
-| Mica (Windows 11)                   | ![Light, Mica][s-lm]                    | ![Dark, Mica][s-dm]                    |
-| Mica and Floating Tabs (Windows 11) | ![Light, Mica and Floating Tabs][s-lmf] | ![Dark, Mica and Floating Tabs][s-dmf] |
-| GTK (GNOME 42, [adw-gtk3][1] theme) | ![Light, GTK][s-lgtk]                   | ![Dark, GTK][s-dgtk]                   |
+1. Go to `about:config` page and set `devtools.jsonview.enabled` = `false`.
+2. Install the JSON Lite extension from [here](https://addons.mozilla.org/en-US/firefox/addon/json-lite/).
+3. Set the values as shown in the screenshot above, you can find the values to copy below.
 
-## Tweaks
-Certain tweaks can be applied to the theme, to enable them navigate to `about:config` and create a boolean key for each tweak you want to use and set it to `true`, then restart the browser.
+   ```yaml
+   Font: 13ps JetBrains Mono,monospace
+   Text color: #f8f8f2
+   Background color: #282A36
+   Info color: #6272a4
+   Info hover color: #6272a4
+   Line numbers color: #6272a4
+   Line numbers background: #1D2128
+   String color: #f1fa8c
+   Number color: #bd93f9
+   Boolean color: #bd93f9
+   Null color: #bd93f9
+   Propertie name color: #8be9fd
+   Error color: #ed2655
+   ```
 
-To disable a tweak, set the key to `false` or delete it, then restart the browser.
+## 🎨 Tweaks
 
-| use background image on newtab page                                                                |
-| -------------------------------------------------------------------------------------------------- |
-| **SETUP: Add an image named `background-0.(jpg/png)` to the `chrome` folder.**                     |
-| **OPTIONAL: Add a second image named `background-1.(jpg/png)` for seperate dark mode background.** |
-| `uc.tweak.newtab-background`                                                                       |
-
-| hide Firefox logo on newtab page |
-| -------------------------------- |
-| `uc.tweak.hide-newtab-logo`      |
-
-| disable drag space above tabs |
-| ----------------------------- |
-| `uc.tweak.disable-drag-space` |
-
-| enable Edge style floating tabs |
-| ------------------------------- |
-| `uc.tweak.floating-tabs`        |
-
-| enable Mica toolbar background *(Windows 11 only)*                  |
-| ------------------------------------------------------------------- |
-| **See [Mica Tweak Instructions][3] for installation instructions.** |
-| **NOTE: Only works on default theme: 'System theme - auto'**        |
-| `uc.tweak.win11-mica`                                               |
-
-| force tab background colour to the same colour as the navbar background (useful for Proton themes) |
-| -------------------------------------------------------------------------------------------------- |
-| **NOTE: can cause readability issues with some themes! (eg. white text on white bg)**              |
-| `uc.tweak.force-tab-colour`                                                                        |
-| ![force tab colour example](screenshots/force-tab-colour.svg) (Left: OFF, Right: ON)               |
-
-| Show context menu navigation buttons (Back, Forward, Reload, etc.) vertically |
-| ----------------------------------------------------------------------------- |
-| **NOTE: labels are only shown in the English language.**                      |
-| `uc.tweak.vertical-context-navigation`                                        |
-
-| remove tab separators            |
-| -------------------------------- |
-| `uc.tweak.remove-tab-separators` |
-
-| use Firefox's default context menu font-size (only applies to Windows) |
-| ---------------------------------------------------------------------- |
-| `uc.tweak.smaller-context-menu-text`                                   |
-
-| disable custom context menus   |
-| ------------------------------ |
-| `uc.tweak.revert-context-menu` |
-
-| if a tab's close button is hidden, show it when hovering over tab |
-| ----------------------------------------------------------------- |
-| `uc.tweak.show-tab-close-button-on-hover`                         |
-
-## Mica Tweak Instructions (Windows 11 Only)
-1. Download and install [Mica For Everyone][2].
-2. Create a custom process rule with the following:
-   1. Name: `firefox`
-   2. Titlebar Color: `System`
-   3. Backdrop Type: `Mica`
-3. Enable tweak in `about:config`: `uc.tweak.win11-mica`
-4. Restart Firefox.
-
-## Acknowledgements
-[muckSponge](https://github.com/muckSponge) - [MaterialFox](https://github.com/muckSponge/MaterialFox)
-
-[Microsoft](https://github.com/microsoft) - [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons)
-
-[KibSquib48](https://github.com/KibSquib48) - [MicaFox](https://github.com/KibSquib48/MicaFox)
-
-<!-- links -->
-[1]: https://github.com/lassekongo83/adw-gtk3
-[2]: https://github.com/MicaForEveryone/MicaForEveryone
-[3]: #mica-tweak-instructions-windows-11-only
-
-<!-- light mode screenshot links -->
-[s-l]: screenshots/light.png
-[s-lf]: screenshots/light-floating-tabs.png
-[s-lm]: screenshots/light-mica.png
-[s-lmf]: screenshots/light-mica-floating-tabs.png
-[s-lgtk]: screenshots/gtk-light.png
-
-<!-- dark mode screenshot links -->
-[s-d]: screenshots/dark.png
-[s-df]: screenshots/dark-floating-tabs.png
-[s-dm]: screenshots/dark-mica.png
-[s-dmf]: screenshots/dark-mica-floating-tabs.png
-[s-dgtk]: screenshots/gtk-dark.png
+Certain customizations like hiding the Firefox logo on the newtab page or switching to floating tabs can be done on the theme. More information on how to do this can be found in the original [repository](https://github.com/bmFtZQ/edge-frfox#tweaks).
