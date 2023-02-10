@@ -2,7 +2,7 @@
 
 This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](https://github.com/bmFtZQ/edge-frfox) that aims to recreate the look and feel of the Chromium version of [Microsoft Edge](https://www.microsoft.com/edge) in the style of [Dracula](https://draculatheme.com/).
 
-**[Extra Features](#-extra-features) • [Installation](#installation) • [JSON Viewer](#-json-viewer) • [Tweaks](#-tweaks) • [License](#-license)**
+**[Extra Features](#-extra-features) • [Installation](#️-installation) • [JSON Viewer](#-json-viewer) • [Tweaks](#-tweaks) • [License](#-license)**
 
 ![thumbnail](screenshots/thumbnail.png)
 
@@ -11,7 +11,7 @@ This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](
 - Custom DevTools
 - Custom [JSON Viewer](#-json-viewer)
 
-## Installation
+## ⚙️ Installation
 
 1. Go to `about:support` and click the "Open Folder/Show in Finder" button for the root directory of your browser profile/s.
 2. Download and copy the `chrome` folder into the profile folder.
