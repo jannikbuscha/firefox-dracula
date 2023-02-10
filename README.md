@@ -11,7 +11,7 @@ This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](
 - Custom DevTools
 - Custom [JSON Viewer](#-json-viewer)
 
-## ⚙️ Installation
+## Installation
 
 1. Go to `about:support` and click the "Open Folder/Show in Finder" button for the root directory of your browser profile/s.
 2. Download and copy the `chrome` folder into the profile folder.
