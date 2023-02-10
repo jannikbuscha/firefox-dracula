@@ -2,7 +2,7 @@
 
 This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](https://github.com/bmFtZQ/edge-frfox) that aims to recreate the look and feel of the Chromium version of [Microsoft Edge](https://www.microsoft.com/edge) in the style of [Dracula](https://draculatheme.com/).
 
-**[Extra Features](#-extra-features) • [Installation](#-installation) • [JSON Viewer](#-json-viewer) • [Tweaks](#-tweaks)**
+**[Extra Features](#-extra-features) • [Installation](#-installation) • [JSON Viewer](#-json-viewer) • [Tweaks](#-tweaks)** • [License](#-license)**
 
 ![thumbnail](screenshots/thumbnail.png)
 
@@ -63,3 +63,7 @@ This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](
 Certain customizations like hiding the Firefox logo on the newtab page or switching to floating tabs can be done on the theme. More information on how to do this can be found in the original [repository](https://github.com/bmFtZQ/edge-frfox#tweaks).
 
 You can also check out [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) themes (e.g. [StackOverflow](https://draculatheme.com/stackoverflow) or [GitHub](https://draculatheme.com/github)).
+
+## 📝 License
+
+[MIT](./LICENSE)
