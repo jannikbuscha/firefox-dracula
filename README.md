@@ -60,9 +60,71 @@ This Firefox userChrome.css and userContent.css theme is a fork of [Edge-Frfox](
 
 ## 🎨 Tweaks
 
-Certain customizations like hiding the Firefox logo on the newtab page or switching to floating tabs can be done on the theme. More information on how to do this can be found in the original [repository](https://github.com/bmFtZQ/edge-frfox#tweaks).
+Certain tweaks can be applied to the theme, to enable them navigate to `about:config` and create a boolean key for each tweak you want to use and set it to `true`, then restart the browser.
+
+To disable a tweak, set the key to `false` or delete it, then restart the browser.
+
+| use background image on newtab page                                                                |
+| -------------------------------------------------------------------------------------------------- |
+| **SETUP: Add an image named `background-0.(jpg/png)` to the `chrome` folder.**                     |
+| **OPTIONAL: Add a second image named `background-1.(jpg/png)` for seperate dark mode background.** |
+| `uc.tweak.newtab-background`                                                                       |
+
+| hide Firefox logo on newtab page |
+| -------------------------------- |
+| `uc.tweak.hide-newtab-logo`      |
+
+| disable drag space above tabs |
+| ----------------------------- |
+| `uc.tweak.disable-drag-space` |
+
+| enable Edge style floating tabs |
+| ------------------------------- |
+| `uc.tweak.floating-tabs`        |
+
+| enable Mica toolbar background *(Windows 11 only)*                  |
+| ------------------------------------------------------------------- |
+| **See [Mica Tweak Instructions][3] for installation instructions.** |
+| **NOTE: Only works on default theme: 'System theme - auto'**        |
+| `uc.tweak.win11-mica`                                               |
+
+| force tab background colour to the same colour as the navbar background (useful for Proton themes) |
+| -------------------------------------------------------------------------------------------------- |
+| **NOTE: can cause readability issues with some themes! (eg. white text on white bg)**              |
+| `uc.tweak.force-tab-colour`                                                                        |
+| ![force tab colour example](screenshots/force-tab-colour.svg) (Left: OFF, Right: ON)               |
+
+| Show context menu navigation buttons (Back, Forward, Reload, etc.) vertically |
+| ----------------------------------------------------------------------------- |
+| **NOTE: labels are only shown in the English language.**                      |
+| `uc.tweak.vertical-context-navigation`                                        |
+
+| remove tab separators            |
+| -------------------------------- |
+| `uc.tweak.remove-tab-separators` |
+
+| use Firefox's default context menu font-size (only applies to Windows) |
+| ---------------------------------------------------------------------- |
+| `uc.tweak.smaller-context-menu-text`                                   |
+
+| disable custom context menus   |
+| ------------------------------ |
+| `uc.tweak.revert-context-menu` |
+
+| if a tab's close button is hidden, show it when hovering over tab |
+| ----------------------------------------------------------------- |
+| `uc.tweak.show-tab-close-button-on-hover`                         |
 
 You can also check out [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) themes (e.g. [StackOverflow](https://draculatheme.com/stackoverflow) or [GitHub](https://draculatheme.com/github)).
+
+## Mica Tweak Instructions (Windows 11 Only)
+1. Download and install [Mica For Everyone][2].
+2. Create a custom process rule with the following:
+   1. Name: `firefox`
+   2. Titlebar Color: `System`
+   3. Backdrop Type: `Mica`
+3. Enable tweak in `about:config`: `uc.tweak.win11-mica`
+4. Restart Firefox.
 
 ## 📝 License
 
