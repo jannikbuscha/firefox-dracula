@@ -117,7 +117,7 @@ To disable a tweak, set the key to `false` or delete it, then restart the browse
 
 You can also check out [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) themes (e.g. [StackOverflow](https://draculatheme.com/stackoverflow) or [GitHub](https://draculatheme.com/github)).
 
-## Mica Tweak Instructions (Windows 11 Only)
+### Mica Tweak Instructions (Windows 11 Only)
 1. Download and install [Mica For Everyone][2].
 2. Create a custom process rule with the following:
    1. Name: `firefox`
